@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/db1_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/TitleBar" >
+        <ImageView
+            style="@style/TitleBarLogo"
+            android:contentDescription="@string/description_logo"
+            android:src="@drawable/title_logo" />
+
+        <ImageView
+            style="@style/TitleBarSeparator"
+            android:contentDescription="@string/description_logo" />
+
+        <TextView style="@style/TitleBarText" />
+
+        <ImageButton
+            style="@style/TitleBarAction"
+            android:contentDescription="@string/description_about"
+            android:onClick="onClickAbout"
+            android:src="@drawable/title_about" />
+
+        <ImageButton
+            style="@style/TitleBarAction"
+            android:contentDescription="@string/description_search"
+            android:onClick="onClickSearch"
+            android:src="@drawable/title_search" />
+    </LinearLayout>
+    
+    
+
+    <com.example.reminder.extensions.DashboardLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <Button
+            android:id="@+id/home_btn_feature1"
+            style="@style/DashboardButton"
+            android:drawableTop="@drawable/home_button3"            
+            android:text="@string/title_feature1"
+            android:onClick="onClickFeature" />
+
+        <Button
+            android:id="@+id/home_btn_feature2"
+            style="@style/DashboardButton"
+            android:drawableTop="@drawable/home_button2"
+            android:text="@string/title_feature2"
+            android:onClick="onClickFeature" />
+
+        <Button
+            android:id="@+id/home_btn_feature3"
+            style="@style/DashboardButton"
+            android:drawableTop="@drawable/home_button1"
+            android:onClick="onClickFeature"
+            android:text="@string/title_feature3" />
+
+        <Button
+            android:id="@+id/home_btn_feature4"
+            style="@style/DashboardButton"
+            android:drawableTop="@drawable/home_button4"
+            android:onClick="onClickFeature"
+            android:text="@string/title_feature4" />
+
+        <!-- <Button
+            android:id="@+id/home_btn_feature5"
+            style="@style/DashboardButton"
+            android:drawableTop="@drawable/home_button5"
+            android:text="@string/title_feature5"
+            android:onClick="onClickFeature" />
+
+        <Button
+            android:id="@+id/home_btn_feature6"
+            style="@style/DashboardButton"
+            android:drawableTop="@drawable/home_button6"
+            android:text="@string/title_feature6"
+            android:onClick="onClickFeature" /> -->
+    </com.example.reminder.extensions.DashboardLayout>
+
+</LinearLayout>

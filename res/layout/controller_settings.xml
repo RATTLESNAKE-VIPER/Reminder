@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+    <LinearLayout style="@style/TitleBar">
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_home"
+            android:src="@drawable/title_home"
+            android:onClick="onClickHome" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+        <TextView style="@style/TitleBarText" />
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_about"
+            android:src="@drawable/title_about"
+            android:onClick="onClickAbout" />
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_search"
+            android:src="@drawable/title_search"
+            android:onClick="onClickSearch" />
+    </LinearLayout>
+    
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+        
+    <!-- Header Part Start -->
+    <!-- <RelativeLayout  android:id="@+id/headerPart" android:layout_height="45dp" android:layout_width="fill_parent"
+        android:layout_alignParentTop="true" android:background="@drawable/header_gradient">
+
+        <TextView android:id="@+id/header" android:text="Bill"
+            android:textColor="#ffffff" android:textStyle="bold"
+            android:textSize="20dp" android:layout_centerInParent="true"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+    </RelativeLayout> -->
+    <!-- Header Part Finish -->
+
+
+    <RelativeLayout android:layout_below="@+id/headerPart" android:layout_width="fill_parent"
+        android:layout_height="fill_parent" android:layout_marginBottom="55dp">
+
+        <RelativeLayout android:id="@+id/firstBorderLayout"
+            android:layout_height="wrap_content" android:layout_width="fill_parent"
+            android:layout_marginLeft="20dp" android:layout_marginRight="20dp" 
+            android:layout_marginTop="30dp" android:background="@drawable/borderframe">
+
+            <TableLayout android:id="@+id/TableLayout01" android:layout_width="fill_parent" 
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content" android:stretchColumns="1">     
+
+                <TableRow android:id="@+id/TableRow01" android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content" android:layout_gravity="center_vertical">       
+
+                    <TextView android:id="@+id/snooze_time" android:layout_width="wrap_content" android:layout_gravity="center_vertical|right"
+                        android:layout_height="wrap_content" android:text="Snooze Time" android:layout_marginRight="10dp"
+                        android:textSize="18dp" android:textColor="#A8A8A8"/>     
+                    
+                    <EditText android:id="@+id/snooze_time_value" android:layout_width="wrap_content" android:layout_marginLeft="10dp"
+                        android:layout_marginRight="30dp" android:layout_gravity="center_vertical|left"
+                        android:textSize="18dp" android:textColor="#000000" android:paddingRight="5dp"
+                        android:layout_height="wrap_content" android:text=" $00.00"/>
+                </TableRow>     
+
+                <View        
+                    android:layout_height="1dip"
+                    android:background="#FF909090"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="3dp" />
+                
+                <TableRow android:id="@+id/TableRow02" android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content" android:layout_gravity="center_vertical">       
+
+                    <TextView android:id="@+id/min_radius" android:layout_width="wrap_content" android:layout_gravity="center_vertical|right"
+                        android:layout_height="wrap_content" android:text="Minimum Radius" android:layout_marginRight="10dp"
+                        android:textSize="18dp" android:textColor="#A8A8A8"/>     
+                    
+                    <EditText android:id="@+id/min_radius_value" android:layout_width="wrap_content" android:layout_marginLeft="10dp"
+                        android:layout_marginRight="30dp" android:layout_gravity="center_vertical|left"
+                        android:textSize="18dp" android:textColor="#000000" android:paddingRight="5dp"
+                        android:layout_height="wrap_content" android:text=" $00.00"/>
+                </TableRow>   
+                
+                <View        
+                    android:layout_height="1dip"
+                    android:background="#FF909090"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="3dp" />
+                
+                <TableRow android:id="@+id/TableRow03" android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content" android:layout_gravity="center_vertical">       
+
+                    <TextView android:id="@+id/max_radius" android:layout_width="wrap_content" android:layout_gravity="center_vertical|right"
+                        android:layout_height="wrap_content" android:text="Maximum Radius" android:layout_marginRight="10dp"
+                        android:textSize="18dp" android:textColor="#A8A8A8"/>     
+                    
+                    <EditText android:id="@+id/max_radius_value" android:layout_width="wrap_content" android:layout_marginLeft="10dp"
+                        android:layout_marginRight="30dp" android:layout_gravity="center_vertical|left"
+                        android:textSize="18dp" android:textColor="#000000" android:paddingRight="5dp"
+                        android:layout_height="wrap_content" android:text=" $00.00"/>
+                </TableRow>
+
+            </TableLayout> 
+
+        </RelativeLayout>
+
+        <!-- Bottom Continue Start -->
+        <RelativeLayout android:id="@+id/bottomContinueLayout" 
+            android:layout_height="45dp" android:layout_width="fill_parent"
+            android:layout_below="@id/firstBorderLayout"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp" >
+
+            <Button android:id="@+id/save" android:text="Save"
+                android:textColor="#ffffff" android:layout_alignParentRight="true"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                android:layout_centerInParent="true"
+                android:onClick="onClickSave"/>
+
+        </RelativeLayout>
+        <!-- Bottom Continue Finish -->
+    </RelativeLayout>
+     <LinearLayout android:id="@+id/addMobLayout" android:layout_below="@+id/bottomContinueLayout" 
+        android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_alignParentBottom="true">
+
+    </LinearLayout>
+
+</RelativeLayout>
+</LinearLayout>

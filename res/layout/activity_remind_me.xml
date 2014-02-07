@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/TitleBar" >
+
+        <ImageButton
+            style="@style/TitleBarAction"
+            android:contentDescription="@string/description_home"
+            android:onClick="onClickHome"
+            android:src="@drawable/title_home" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+
+        <TextView style="@style/TitleBarText" />
+
+        <Button
+            style="@style/TitleBarAction"
+            android:contentDescription="@string/description_done"
+            android:onClick="onClickDone"
+            android:text="@string/done"
+            android:textColor="@android:color/white"
+            android:textColorHighlight="@android:color/black" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"        
+        android:clipChildren="true"
+        android:fillViewport="true"
+        android:scrollbarStyle="outsideOverlay" >
+    </ScrollView>
+    <!-- Remind Me, Priority, Notes, delete -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" >
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:text="@string/location"
+            android:textSize="16sp" />
+
+        <ToggleButton
+            android:id="@+id/tbLocationOnOff"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bgtoggle"
+            android:button="@null"
+            android:textOff=""
+            android:textOn="" />
+
+        <TextView
+            android:id="@+id/locationTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/tbLocationOnOff"
+            android:layout_marginTop="10dp"
+            android:text="@string/currentLocation"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/locationDesc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/locationTitle"
+            android:layout_centerVertical="true"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <CheckedTextView
+            android:id="@+id/whenLeave"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/locationDesc"
+            android:checkMark="?android:attr/textCheckMark"
+            android:gravity="center_vertical"
+            android:text="@string/whenLeave"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <CheckedTextView
+            android:id="@+id/whenArrive"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/whenLeave"
+            android:checkMark="?android:attr/textCheckMark"
+            android:gravity="center_vertical"
+            android:text="@string/whenArrive"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/TitleBar" >
+
+        <ImageButton
+            style="@style/TitleBarAction"
+            android:contentDescription="@string/description_home"
+            android:onClick="onClickHome"
+            android:src="@drawable/title_home" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+
+        <TextView style="@style/TitleBarText" />
+
+        <Button
+            style="@style/TitleBarAction"
+            android:contentDescription="@string/description_done"
+            android:onClick="onClickDone"
+            android:text="@string/done"
+            android:textColor="@android:color/white"
+            android:textColorHighlight="@android:color/black" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="true"
+        android:fillViewport="false"
+        android:scrollbarStyle="insideOverlay"
+        android:layout_margin="10dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/edit_task_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_task_hint"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/remind_me"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:onClick="onClickRemindMe"
+                android:text="@string/remind_me" />
+
+            <!--
+                 <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:onClick="onClickPriority"
+                android:text="@string/priority" />
+            -->
+
+            <CheckedTextView
+                android:id="@+id/priority"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:checkMark="?android:attr/textCheckMark"
+                android:gravity="center_vertical"
+                android:text="@string/priority"
+                android:textSize="14sp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp" />
+
+            <EditText
+                android:id="@+id/notes"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/notes"
+                android:maxLines="5"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </ScrollView>
+    <!-- Remind Me, Priority, Notes, delete -->
+
+</LinearLayout>
