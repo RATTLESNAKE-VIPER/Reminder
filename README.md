@@ -1,15 +1,15 @@
 Reminder
 --------
-Reminders is a great android app to help keep things organized throughout the day as it allows to setup reminders based on location. For example, location-based Reminders can help you remember to call someone or do the laundry when you get to a specific location.
+Reminder is a great android app to help keep things organized throughout the day as it allows to setup reminder based on location. For example, location-based Reminder can help you remember to call someone or do the laundry when you get to a specific location.
 
-Reminders will start notifying you when you have arrived at, or left, the specified location. A handy feature for the busy smartphone user that’s always on the go.
+Reminder will start notifying you when you have arrived at, or left, the specified location. A handy feature for the busy smartphone user that’s always on the go.
 
 
 #####Steps ->
   
 ######Reminders
 	- Shows list of alarms (pending and completed)
-	- Add new reminders
+	- Add new reminder
 	- Details screen
 	  >> Fields
 		 -Task name
@@ -23,7 +23,7 @@ Reminders will start notifying you when you have arrived at, or left, the specif
 		 -Delete
 
 ######Map/Location
-	- See the list of locations for the set reminders
+	- See the list of locations for the set reminder
 	- Can drop new pin and save the location for future use
 	
 ######Settings
